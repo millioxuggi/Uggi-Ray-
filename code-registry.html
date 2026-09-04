@@ -1,14 +1,149 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UGGI-RAY Code Registry</title><link rel="stylesheet" href="code-registry.css"></head><body>
-<header><strong>UGGI-RAY<small>CODE REGISTRY V1</small></strong><a href="code-lab.html">← Code Lab</a></header>
-<main><section class="hero"><div class="seal">777</div><p>CODE GOVERNANCE LAYER</p><h1>Code Registry</h1><span>Register first. Define its duty. Version it. Test it. Then integrate it.</span></section>
-<div class="controls"><button onclick="registerDemo()">＋ REGISTER NEW CODE</button><input id="search" oninput="filterModules()" placeholder="Search modules..."></div>
-<section id="registry">
-<article><div class="top"><h2>AQUADUSE 777 / Eternal Core</h2><b>REGISTERED</b></div><p>Source artifact associated with the Eternal Flame module.</p><div class="facts"><span>Function: Eternal Flame / Core artifact</span><span>Version: V1</span><span>Status: Registered</span><span>Execution: Disabled on public site</span></div></article>
-<article><div class="top"><h2>AI Intelligence</h2><b class="green">PLANNED</b></div><p>Future intelligence service layer for analysis and platform assistance.</p><div class="facts"><span>Function: Intelligence</span><span>Version: V1</span><span>Status: Interface only</span></div></article>
-<article><div class="top"><h2>Solar Operations</h2><b class="green">READY</b></div><p>Reserved for solar packages, installations, leads, monitoring and operations code.</p><div class="facts"><span>Function: Solar operations</span><span>Status: Awaiting host code</span></div></article>
-<article><div class="top"><h2>Marketplace</h2><b class="green">READY</b></div><p>Reserved for commerce, listings, orders and future trade services.</p><div class="facts"><span>Function: Commerce</span><span>Status: Awaiting host code</span></div></article>
-<article><div class="top"><h2>Partner Network</h2><b class="green">READY</b></div><p>Reserved for partner businesses, stores, referrals and cooperative promotion.</p><div class="facts"><span>Function: Partner ecosystem</span><span>Status: Awaiting host code</span></div></article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGGI-RAY | Code Registry V2</title>
+<link rel="stylesheet" href="code-registry.css">
+</head>
+<body>
+<header class="topbar">
+  <div><div class="brand">UGGI-RAY</div><div class="sub">CODE REGISTRY V2</div></div>
+  <a href="code-lab.html">← Code Lab</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="seal">777</div>
+  <p class="eyebrow">PRIVATE DEVELOPMENT MODULE</p>
+  <h1>Code Registry V2</h1>
+  <p class="lead">Host Code Intake — register each code, define its duty, version it, and prepare it for controlled testing.</p>
+  <div class="notice">SAFE MODE · Registration only · No code is executed on GitHub Pages.</div>
 </section>
-<section class="pipeline"><p>REGISTRATION PIPELINE</p><div class="steps"><span><b>01</b>Receive code</span><span><b>02</b>Name module</span><span><b>03</b>Define duty</span><span><b>04</b>Record version</span><span><b>05</b>Sandbox test</span><span><b>06</b>Approve integration</span></div></section>
-<div class="notice"><strong>Safety boundary:</strong> V1 only records and organizes code. It does not execute uploaded code. Future execution requires a secure backend, authentication, permissions, logging and isolated testing.</div></main>
-<script>function registerDemo(){alert("New Code registration is prepared. When your host code is ready, we will register its function and module before integration.")}function filterModules(){let q=document.getElementById("search").value.toLowerCase();document.querySelectorAll("#registry article").forEach(x=>x.style.display=x.innerText.toLowerCase().includes(q)?"":"none")}</script></body></html>
+
+<section class="panel">
+<h2>Register New Host Code</h2>
+<p class="muted">Use this record when you are ready to bring one of your existing code files into UGGI-RAY.</p>
+
+<form id="registryForm">
+  <label>Code Name
+    <input id="name" required placeholder="Example: Solar Host Engine">
+  </label>
+
+  <label>Module
+    <select id="module">
+      <option>Solar Operations</option>
+      <option>Marketplace</option>
+      <option>Partner Network</option>
+      <option>Jobs & Opportunities</option>
+      <option>Projects & Innovation</option>
+      <option>AI Intelligence</option>
+      <option>Code Lab</option>
+      <option>System</option>
+      <option>Other</option>
+    </select>
+  </label>
+
+  <label>Duty / Function
+    <textarea id="duty" required placeholder="What is this code supposed to do?"></textarea>
+  </label>
+
+  <div class="two">
+    <label>Version
+      <input id="version" value="V1">
+    </label>
+    <label>Language
+      <input id="language" placeholder="Python, JavaScript, PHP...">
+    </label>
+  </div>
+
+  <label>Code File Name
+    <input id="file" placeholder="example.py">
+  </label>
+
+  <label>Dependencies
+    <textarea id="deps" placeholder="Libraries, APIs, services, or say None"></textarea>
+  </label>
+
+  <button type="submit">REGISTER CODE</button>
+</form>
+
+<div id="result" class="result" hidden></div>
+</section>
+
+<section class="panel">
+<h2>Registry Pipeline</h2>
+<div class="pipeline">
+  <span>01<br><b>Receive</b></span>
+  <span>02<br><b>Define Duty</b></span>
+  <span>03<br><b>Version</b></span>
+  <span>04<br><b>Sandbox Test</b></span>
+  <span>05<br><b>Review</b></span>
+  <span>06<br><b>Integrate</b></span>
+</div>
+</section>
+
+<section class="panel">
+<h2>Current Registry</h2>
+
+<div class="entry">
+  <b>AQUADUSE 777 / Eternal Core</b>
+  <span>REGISTERED · V1</span>
+  <p>Source artifact reserved for the Eternal Flame module. Execution remains disabled on public Pages.</p>
+</div>
+
+<div class="entry">
+  <b>AI Intelligence</b>
+  <span>PLANNED</span>
+  <p>Future intelligence layer; backend connection comes later.</p>
+</div>
+
+<div class="entry">
+  <b>Solar Operations</b>
+  <span>READY FOR HOST CODE</span>
+  <p>Awaiting the Solar host code and defined duty.</p>
+</div>
+
+<div class="entry">
+  <b>Marketplace</b>
+  <span>READY FOR HOST CODE</span>
+  <p>Awaiting marketplace host code.</p>
+</div>
+
+<div class="entry">
+  <b>Partner Network</b>
+  <span>READY FOR HOST CODE</span>
+  <p>Awaiting partner-network host code.</p>
+</div>
+</section>
+
+<section class="panel">
+<h2>Safety Boundary</h2>
+<p class="muted">
+This V2 page records code metadata only. Do not place passwords, API keys, payment credentials,
+or private customer information into the public GitHub repository. Actual host-code execution
+will require a secure backend and isolated sandbox.
+</p>
+</section>
+</main>
+
+<script>
+document.getElementById('registryForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const module = document.getElementById('module').value;
+  const duty = document.getElementById('duty').value.trim();
+  const version = document.getElementById('version').value.trim() || 'V1';
+
+  const result = document.getElementById('result');
+  result.hidden = false;
+  result.innerHTML =
+    '<b>READY FOR REGISTRATION</b><br>' +
+    name + ' · ' + module + ' · ' + version +
+    '<br><small>' + duty + '</small>' +
+    '<br><em>Demo record only — no code was uploaded or executed.</em>';
+});
+</script>
+</body>
+</html>
