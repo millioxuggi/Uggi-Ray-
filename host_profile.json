@@ -56,7 +56,39 @@
     "unapproved_deletion": false,
     "production_deployment": "APPROVAL_REQUIRED"
   },
+"logging": {
+  "enabled": true,
+  "provider": "GOD_CODE.safe_log",
+  "log_file": "divine_log.json",
+  "backup_file": "divine_log_backup.txt",
+  "maximum_entries": 500,
+  "fallback_to_console": true,
 
+  "events": {
+    "HOST_START": true,
+    "HOST_STOP": true,
+    "MODULE_REGISTER": true,
+    "MODULE_REQUEST": true,
+    "AUTHORIZATION_GRANTED": true,
+    "AUTHORIZATION_DENIED": true,
+    "SANDBOX_START": true,
+    "SANDBOX_COMPLETE": true,
+    "SANDBOX_ERROR": true,
+    "AI_PREDICTION": true,
+    "ECOSYSTEM_EVENT": true,
+    "SPIRIT_EVENT": true,
+    "CODE_CHANGE_REQUEST": true,
+    "ROLLBACK": true,
+    "EMERGENCY_STOP": true
+  },
+
+  "data_policy": {
+    "secrets_in_logs": false,
+    "credentials_in_logs": false,
+    "untrusted_code_in_logs": false,
+    "maximum_data_length": 500
+  }
+},
   "audit": {
     "enabled": true,
     "record_timestamp": true,
