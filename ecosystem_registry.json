@@ -1,0 +1,118 @@
+{
+  "system": "AQUADUSE",
+  "module": "ECOSYSTEM",
+  "version": "1.0.0",
+  "status": "REGISTERED \u2014 EXECUTION DISABLED",
+  "forms_count": 14,
+  "forms": [
+    {
+      "name": "LIQUID",
+      "file": "liquid.py",
+      "language": "Python",
+      "role": "Flow / adaptation"
+    },
+    {
+      "name": "VAPOR",
+      "file": "vapor.py",
+      "language": "Python",
+      "role": "Cloud / remote interaction",
+      "review": "Missing random import in supplied source"
+    },
+    {
+      "name": "ICE",
+      "file": "ice.c",
+      "language": "C",
+      "role": "Stability / strength"
+    },
+    {
+      "name": "MIST",
+      "file": "mist.go",
+      "language": "Go",
+      "role": "Distribution"
+    },
+    {
+      "name": "WAVE",
+      "file": "wave.rs",
+      "language": "Rust",
+      "role": "Motion / pulse"
+    },
+    {
+      "name": "BUBBLE",
+      "file": "bubble.lua",
+      "language": "Lua",
+      "role": "Encapsulation / embedded form"
+    },
+    {
+      "name": "OCEAN",
+      "file": "ocean.java",
+      "language": "Java",
+      "role": "Whole-system / enterprise form"
+    },
+    {
+      "name": "RAIN",
+      "file": "rain.js",
+      "language": "JavaScript",
+      "role": "Water input / replenishment",
+      "source_status": "REFERENCED \u2014 SOURCE NOT SUPPLIED"
+    },
+    {
+      "name": "RIVER",
+      "file": "river",
+      "language": "Compiled binary",
+      "role": "Flow / outflow",
+      "source_status": "REFERENCED \u2014 SOURCE NOT SUPPLIED"
+    },
+    {
+      "name": "SPRING",
+      "file": "spring.sh",
+      "language": "Shell",
+      "role": "Renewal / source",
+      "source_status": "REFERENCED \u2014 SOURCE NOT SUPPLIED"
+    },
+    {
+      "name": "DEW",
+      "file": "dew.rb",
+      "language": "Ruby",
+      "role": "Condensation / recovery",
+      "source_status": "REFERENCED \u2014 SOURCE NOT SUPPLIED"
+    },
+    {
+      "name": "TIDE",
+      "file": "tide.jar",
+      "language": "Java JAR",
+      "role": "Periodic movement",
+      "source_status": "REFERENCED \u2014 SOURCE NOT SUPPLIED"
+    },
+    {
+      "name": "FROST",
+      "file": "frost.swift",
+      "language": "Swift",
+      "role": "Cold-state transformation",
+      "source_status": "REFERENCED \u2014 SOURCE NOT SUPPLIED"
+    },
+    {
+      "name": "STORM",
+      "file": "storm",
+      "language": "Compiled binary",
+      "role": "High-energy interaction",
+      "source_status": "REFERENCED \u2014 SOURCE NOT SUPPLIED"
+    }
+  ],
+  "state_model": {
+    "water_level": 0.0,
+    "chaos": 0.0
+  },
+  "governance": {
+    "execution": "sandbox_only",
+    "network_access": "disabled_by_default",
+    "self_modification": "disabled",
+    "production_deployment": "approval_required",
+    "host_control": "disabled",
+    "source_preservation": "enabled"
+  },
+  "source_notes": [
+    "The supplied ecosystem launcher invokes external programs through subprocess.",
+    "The supplied interaction logic checks forms[0], which is LIQUID, when intending to detect RAIN, RIVER and STORM.",
+    "Only the seven core form sources have been supplied so far; seven additional forms are referenced by filename/command."
+  ]
+}
