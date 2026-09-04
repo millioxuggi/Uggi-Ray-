@@ -1,0 +1,58 @@
+{
+  "system": "AQUADUSE",
+  "module": "WATER_UNITY",
+  "version": "1.0.0",
+  "status": "REGISTERED \u2014 EXECUTION DISABLED",
+  "forms": [
+    {
+      "name": "LIQUID",
+      "file": "liquid.py",
+      "language": "Python",
+      "role": "Flow / adaptation"
+    },
+    {
+      "name": "VAPOR",
+      "file": "vapor.py",
+      "language": "Python",
+      "role": "Cloud / remote interaction"
+    },
+    {
+      "name": "ICE",
+      "file": "ice.c",
+      "language": "C",
+      "role": "Stability / strength"
+    },
+    {
+      "name": "MIST",
+      "file": "mist.go",
+      "language": "Go",
+      "role": "Distribution"
+    },
+    {
+      "name": "WAVE",
+      "file": "wave.rs",
+      "language": "Rust",
+      "role": "Motion / pulse"
+    },
+    {
+      "name": "BUBBLE",
+      "file": "bubble.lua",
+      "language": "Lua",
+      "role": "Encapsulation / embedded form"
+    },
+    {
+      "name": "OCEAN",
+      "file": "ocean.java",
+      "language": "Java",
+      "role": "Whole-system / enterprise form"
+    }
+  ],
+  "governance": {
+    "execution": "sandbox_only",
+    "production_deployment": "approval_required",
+    "self_modification": "disabled",
+    "network_access": "disabled_by_default",
+    "host_control": "disabled",
+    "source_preservation": "enabled"
+  }
+}
