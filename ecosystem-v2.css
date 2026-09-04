@@ -1,0 +1,12 @@
+*{box-sizing:border-box}body{margin:0;background:#06100d;color:#ecfff6;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 6%;border-bottom:1px solid #17362b;position:sticky;top:0;background:#06100df2;backdrop-filter:blur(10px);z-index:5}
+.brand{display:flex;gap:12px;align-items:center}.brand b{display:block;letter-spacing:2px}.brand small{display:block;color:#8ba99d}
+.seal{display:grid;place-items:center;width:44px;height:44px;border:1px solid #b7ffcf;border-radius:50%;font-weight:800}.back{color:#d7ffe5;text-decoration:none;border:1px solid #2c624d;padding:9px 13px;border-radius:10px}
+main{width:min(1100px,90%);margin:auto;padding:50px 0 80px}.eyebrow{color:#9fffc0;letter-spacing:2px;font-size:.78rem}
+.hero h1{font-size:clamp(2.2rem,7vw,5rem);line-height:1;margin:10px 0 18px}.hero p{max-width:720px;color:#a9c7bb;font-size:1.05rem;line-height:1.7}
+.status{display:inline-flex;align-items:center;gap:9px;margin-top:15px;padding:9px 12px;border:1px solid #245c45;border-radius:999px;color:#baffd0}.status span{width:8px;height:8px;border-radius:50%;background:#62ff9a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.form{border:1px solid #17392c;background:#0a1914;border-radius:15px;padding:18px}
+.form strong{display:block}.form span{color:#7fa698;font-size:.88rem}.panel{margin-top:28px;border:1px solid #17392c;background:#091712;border-radius:18px;padding:24px}
+.state{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.state div{background:#0d211a;border-radius:12px;padding:16px}
+.state span{display:block;color:#7fa698;font-size:.85rem}.state strong{font-size:1.5rem}.panel button{margin-top:18px;padding:12px 16px;border:0;border-radius:10px;background:#d9ffe7;color:#06100d;font-weight:800}
+.note{color:#78998b;font-size:.86rem;line-height:1.6}.gates{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.gates div{padding:12px;border:1px solid #204c3b;border-radius:10px;color:#bdebd0}
