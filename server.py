@@ -23,7 +23,25 @@ socketio = SocketIO(
     cors_allowed_origins=os.getenv("CORS_ORIGINS", "*"),
     async_mode="threading",
 )
+@app.after_request
+def add_cors_headers(response):
+    origin = request.headers.get("Origin", "")
+    frontend_origin = os.getenv(
+        "FRONTEND_ORIGIN",
+        "https://millioxuggi.github.io"
+    )
 
+    if origin == frontend_origin:
+        response.headers["Access-Control-Allow-Origin"] = origin
+        response.headers["Vary"] = "Origin"
+        response.headers["Access-Control-Allow-Headers"] = (
+            "Content-Type, X-Host-Key"
+        )
+        response.headers["Access-Control-Allow-Methods"] = (
+            "GET, POST, OPTIONS"
+        )
+
+    return response
 _state_lock = Lock()
 _runtime = {
     "status": "SAFE",
