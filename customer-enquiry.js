@@ -1,7 +1,7 @@
 // UGGI-RAY Customer Enquiry V1
 // Replace WHATSAPP_NUMBER with the business WhatsApp number before publishing.
 // Keep the number in international format without +, spaces, or brackets.
-const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+const WHATSAPP_NUMBER = "08124796551";
 
 const $ = id => document.getElementById(id);
 $("send").addEventListener("click", () => {
