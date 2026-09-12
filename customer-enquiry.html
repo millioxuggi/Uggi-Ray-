@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UGGI-RAY Customer Enquiry</title>
+<link rel="stylesheet" href="customer-enquiry.css">
+</head>
+<body>
+<main>
+  <a class="back" href="trade-market.html">← Back to Trade & Market</a>
+  <section class="card">
+    <div class="tag">UGGI-RAY // CUSTOMER ENQUIRY</div>
+    <h1>How can we help?</h1>
+    <p class="intro">Choose what you need and we'll prepare your enquiry for WhatsApp.</p>
+
+    <label for="service">Enquiry type</label>
+    <select id="service">
+      <option>Solar Quote</option>
+      <option>Product Enquiry</option>
+      <option>AI / Tech Service</option>
+      <option>Partner With UGGI-RAY</option>
+      <option>Job / Opportunity</option>
+      <option>General Enquiry</option>
+    </select>
+
+    <label for="name">Your name</label>
+    <input id="name" placeholder="Enter your name">
+
+    <label for="details">What do you need?</label>
+    <textarea id="details" rows="5" placeholder="Tell us briefly what you are looking for"></textarea>
+
+    <button id="send">Continue to WhatsApp →</button>
+    <p class="note">Your message is prepared on your device. This page does not store customer information.</p>
+    <p id="status"></p>
+  </section>
+</main>
+<script src="customer-enquiry.js"></script>
+</body>
+</html>
