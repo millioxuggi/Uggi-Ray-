@@ -18,29 +18,15 @@ app.config["SECRET_KEY"] = os.getenv("HOST_SECRET_KEY", "development-only-change
 
 # Socket.IO is used for dashboard updates. The browser dashboard is not given
 # direct operating-system command authority.
-socketio = SocketIO(
-    app,
-    cors_allowed_origins=os.getenv("CORS_ORIGINS", "*"),
-    async_mode="threading",
-)
+socketio = SocketIO(app, cors_allowed_origins=[FRONTEND_ORIGIN], async_mode="threading")
 @app.after_request
 def add_cors_headers(response):
     origin = request.headers.get("Origin", "")
-    frontend_origin = os.getenv(
-        "FRONTEND_ORIGIN",
-        "https://millioxuggi.github.io"
-    )
-
-    if origin == frontend_origin:
+    if origin == FRONTEND_ORIGIN:
         response.headers["Access-Control-Allow-Origin"] = origin
         response.headers["Vary"] = "Origin"
-        response.headers["Access-Control-Allow-Headers"] = (
-            "Content-Type, X-Host-Key"
-        )
-        response.headers["Access-Control-Allow-Methods"] = (
-            "GET, POST, OPTIONS"
-        )
-
+        response.headers["Access-Control-Allow-Headers"] = "Content-Type, X-Host-Key"
+        response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
     return response
 _state_lock = Lock()
 _runtime = {
